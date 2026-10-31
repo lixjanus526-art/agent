@@ -1,2 +1,4 @@
-warning: in the working copy of 'chenchen/versions/investment.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'chenchen/versions/risk-workbench.js', LF will be replaced by CRLF the next time Git touches it
+git diff --check baseline..candidate: PASS
+git diff --cached --check: PASS
+git apply --check review/ui-demo-p0-standalone-assets.patch: PASS (not applied)
+Raw CRLF and whitespace-only TAP case names are preserved with scoped attributes.

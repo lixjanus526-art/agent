@@ -2,7 +2,7 @@
   "evidence_version": "ui-demo-p0-evidence.v1",
   "date": "2026-11-01",
   "timezone": "Asia/Shanghai",
-  "collected_at": "2026-10-31T17:11:32.291Z",
+  "collected_at": "2026-10-31T17:17:18.695Z",
   "source_of_truth": "https://github.com/realchenchenluo/agent",
   "baseline_main_sha": "ced1ccad50319ba69385d7cbbe9c12114c840062",
   "branch": "codex/ui-demo-p0-20261101",
@@ -13,7 +13,7 @@
     "team_push": false,
     "fork_push": true
   },
-  "code_commit_sha": null,
+  "code_commit_sha": "6e48af3a66790649c0c5b213a095a7e477b703ab",
   "draft_pr": null,
   "final_sha": {
     "ref": "refs/heads/codex/ui-demo-p0-20261101",

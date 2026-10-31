@@ -134,8 +134,8 @@
     },
     {
       "path": "review/ui-demo-p0-artifacts/logs/final-check.log",
-      "bytes": 254,
-      "sha256": "92b8c948fa97e2578ef7aa8b8585cd3b89785ee335009101f990eecb9f4b3da5"
+      "bytes": 237,
+      "sha256": "47a5f861ffb701fb12b57d8cdca63bac380f7c216502615e9dad894b8b794257"
     },
     {
       "path": "review/ui-demo-p0-artifacts/pr6-current-http.json",
