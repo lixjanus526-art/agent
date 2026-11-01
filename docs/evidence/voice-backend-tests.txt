@@ -1,0 +1,62 @@
+Voice Backend P0 verification: 2026-11-01
+Baseline: realchenchenluo/agent main ced1ccad50319ba69385d7cbbe9c12114c840062
+Branch: feat/voice-backend-mvp
+Node: v24.22.1
+All provider/DO results below are OFFLINE test doubles unless marked LIVE.
+LIVE provider test explicitly skipped. No real ASR request or deployment.
+
+COMMAND: node --test chenchen/tests/voice*test.mjs
+﹣ LIVE ASR: owner-provided synthetic WAV returns actual provider text (0.5019ms) # SKIP
+✔ offline provider success yields final transcript and never calls financial endpoints (35.8925ms)
+✔ identical concurrent submissions and restart replay consume one provider call (6.0494ms)
+✔ expired or invalid tokens, missing identity and absent server secret fail closed (2.9866ms)
+✔ session reads and writes are isolated across subject and account (3.6481ms)
+✔ CORS exact whitelist and preflight reject arbitrary origin and headers (1.2351ms)
+✔ invalid formats, empty microphone data, oversized audio and missing consent fail before ASR (5.698ms)
+✔ slow or disconnected upload readers are cancelled (19.6814ms)
+✔ provider disconnect, timeout and client abort never fabricate success (16.2846ms)
+✔ provider bad responses are explicit failures and never use fallback text (10.4359ms)
+✔ failed provider outcomes are persisted and repeated input does not retry billing (2.6942ms)
+✔ quota is persistent and shared across gateway users, with atomic fail-closed limits (3.0533ms)
+✔ missing quota config and storage failures stop provider calls (3.286ms)
+✔ storage failure after paid ASR leaves an uncertain outcome and cannot charge again (3.5787ms)
+✔ parallel sessions share a single atomic audio budget (3.719ms)
+✔ user rate limit persists across requests and is independent of another user (4.9885ms)
+✔ cancel stops inflight provider and clears transcript; TTL alarm deletes session (2.8213ms)
+✔ restart with uncertain provider result blocks resubmission and expiry prevents reads (2.3013ms)
+✔ ASR configuration is required and no production mock provider can be selected (2.8145ms)
+✔ confirmation adapter never accepts interim, failure, execute capability or oversized chat text (0.2735ms)
+✔ legacy missing-key exposure reproduced and isolated patch verified: ../../cloudflare/worker.js (26.0461ms)
+✔ legacy missing-key exposure reproduced and isolated patch verified: ../deployment/worker.js (3.8276ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 381.6811
+
+COMMAND: cd chenchen; node scripts/check.js
+JavaScript syntax checks passed.
+
+COMMAND: cd chenchen; node --test
+✔ decision labels accept 500 characters but never truncate overlong identities (6.3279ms)
+ℹ tests 306
+ℹ suites 0
+ℹ pass 305
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 6986.7181
+
+New ESM syntax: node --check passed for every chenchen/voice/*.mjs.
+Static bundle: esbuild 0.28.2 passed; no offline fixtures in production bundle.
+Wrangler 4.151.1 deploy --dry-run: FAILED before bundling: missing @cloudflare/workerd-windows-64.
+Temporary tool installation: network timeout and pnpm EISDIR symlink error.
+Cloudflare local/edge DO integration: NOT TESTED.
+Browser/microphone devices: NOT TESTED.
+Chat Agent end-to-end: NOT TESTED / not connected.
+Legacy auth patch: git apply --check PASSED; UNAPPLIED.
+Original production modules and test assertions: unchanged.

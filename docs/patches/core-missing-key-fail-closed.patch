@@ -1,0 +1,19 @@
+diff --git a/cloudflare/worker.js b/cloudflare/worker.js
+--- a/cloudflare/worker.js
++++ b/cloudflare/worker.js
+@@ -121,4 +121,4 @@
+ function requiresApiKey(request, env) {
+   const expected = String(env.CORE_AGENT_API_KEY || "").trim();
+-  return !expected || request.headers.get("X-Core-Agent-Key") === expected;
++  return Boolean(expected) && request.headers.get("X-Core-Agent-Key") === expected;
+ }
+diff --git a/chenchen/deployment/worker.js b/chenchen/deployment/worker.js
+--- a/chenchen/deployment/worker.js
++++ b/chenchen/deployment/worker.js
+@@ -200,5 +200,4 @@
+ function requiresApiKey(request, env) {
+   const expected = String(env.CORE_AGENT_API_KEY || "").trim();
+-  if (["bailian", "aliyun_bailian"].includes(String(env.MODEL_PROVIDER || "").trim().toLowerCase()) && !expected) return false;
+-  return !expected || request.headers.get("X-Core-Agent-Key") === expected;
++  return Boolean(expected) && request.headers.get("X-Core-Agent-Key") === expected;
+ }

@@ -1,0 +1,28 @@
+name = "xinlan-voice-mvp-staging-candidate"
+main = "voice/voice-gateway.mjs"
+compatibility_date = "2026-10-23"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+preview_urls = false
+
+[vars]
+VOICE_ASR_ENABLED = "false"
+VOICE_ASR_MODEL = "qwen3-asr-flash"
+VOICE_ASR_REGION = "cn-beijing"
+VOICE_ALLOWED_ORIGINS = "http://localhost:8787"
+VOICE_TOKEN_ISSUER = "owner-identity-bridge-pending"
+VOICE_DAILY_AUDIO_SECONDS = "0"
+VOICE_TOTAL_AUDIO_SECONDS = "0"
+
+[[durable_objects.bindings]]
+name = "VOICE_SESSIONS"
+class_name = "VoiceSession"
+[[durable_objects.bindings]]
+name = "VOICE_QUOTA"
+class_name = "VoiceQuota"
+[[migrations]]
+tag = "voice-mvp-v1"
+new_sqlite_classes = ["VoiceSession", "VoiceQuota"]
+
+[observability]
+enabled = false
