@@ -1,0 +1,23 @@
+{
+  "result": "PASS",
+  "layer": "LOCAL_STATIC_BUILD",
+  "artifact": "C:\\Users\\Y7000P\\AppData\\Local\\Temp\\standalone-release-Kr0iXI\\_site",
+  "files": [
+    "index.html",
+    "holdings-intake\\index.html",
+    "holdings-intake\\styles.css",
+    "holdings-intake\\app.js",
+    "fund-market-analysis\\index.html",
+    "fund-market-analysis\\styles.css",
+    "fund-market-analysis\\app.js",
+    "risk-workbench\\index.html",
+    "risk-workbench\\style.css",
+    "risk-workbench\\product-overrides.css",
+    "risk-workbench\\task-view.css",
+    "risk-workbench\\risk-workbench.js",
+    "risk-workbench\\common.js",
+    "risk-workbench\\task-client.mjs",
+    "risk-workbench\\task-state.mjs",
+    "risk-workbench\\task-view.mjs"
+  ]
+}

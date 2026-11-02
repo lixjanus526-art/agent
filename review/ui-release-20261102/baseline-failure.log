@@ -1,0 +1,24 @@
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Reference escapes Pages project: https://example.invalid/versions/task-view.css
+    at visit (F:\ui-release-stability-20261102\chenchen\scripts\standalone-assets-check.cjs:12:12)
+    at visit (F:\ui-release-stability-20261102\chenchen\scripts\standalone-assets-check.cjs:25:7)
+    at visit (F:\ui-release-stability-20261102\chenchen\scripts\standalone-assets-check.cjs:25:7)
+    at validate (F:\ui-release-stability-20261102\chenchen\scripts\standalone-assets-check.cjs:28:3)
+    at Object.<anonymous> (F:\ui-release-stability-20261102\chenchen\scripts\standalone-release-test.cjs:20:15)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

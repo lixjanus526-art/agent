@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "name": "chrome",
+      "version": "156.0.8078.74",
+      "width": 375,
+      "layer": "LOCAL_STATIC_BUILD / MOCK API 503",
+      "result": "PASS"
+    },
+    {
+      "name": "chrome",
+      "version": "156.0.8078.74",
+      "width": 768,
+      "layer": "LOCAL_STATIC_BUILD / MOCK API 503",
+      "result": "PASS"
+    },
+    {
+      "name": "chrome",
+      "version": "156.0.8078.74",
+      "width": 1440,
+      "layer": "LOCAL_STATIC_BUILD / MOCK API 503",
+      "result": "PASS"
+    },
+    {
+      "name": "edge",
+      "version": "156.0.4314.50",
+      "width": 375,
+      "layer": "LOCAL_STATIC_BUILD / MOCK API 503",
+      "result": "PASS"
+    },
+    {
+      "name": "edge",
+      "version": "156.0.4314.50",
+      "width": 768,
+      "layer": "LOCAL_STATIC_BUILD / MOCK API 503",
+      "result": "PASS"
+    },
+    {
+      "name": "edge",
+      "version": "156.0.4314.50",
+      "width": 1440,
+      "layer": "LOCAL_STATIC_BUILD / MOCK API 503",
+      "result": "PASS"
+    }
+  ],
+  "errors": []
+}
